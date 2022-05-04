@@ -1,0 +1,23 @@
+@use '../globals';
+@mixin center ($position: absolute)
+{
+    position: $position;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+@mixin center-x ($position: absolute)
+{
+    position: $position;
+    left: 50%;
+    
+    transform: translatex(-50%);
+}
+@mixin maxWidth($size)
+{
+    @media screen and (max-width: $size) {
+        @content;
+    }
+}
+/*1260 992 768 576*/
+    

@@ -1,0 +1,170 @@
+@use "../utils" as *;
+@use "../globals" as *;
+
+
+header
+{
+    background: url("../images/bg1.jpg") no-repeat center;
+    background-size: cover;
+    min-height: 800px;
+    position: relative;
+    @include maxWidth(992px)
+    {
+        min-height: 520px;
+    }
+    @include maxWidth(768px)
+    {
+        min-height: 490px;
+        padding: 1rem;
+    }
+    @include maxWidth(568px)
+    {
+        min-height: 420px;
+        
+    }
+    nav{
+        padding-top: 4.5rem;
+        position: relative;
+        @include maxWidth(768px)
+        {
+            padding: 0;
+            text-align: right;
+            input[type=checkbox]:checked + ul
+            {
+                display: block;
+                background: rgba(16, 16, 16, 0.85);
+                padding: 15px 0;
+                text-align: center;
+                width: 100%;
+            }
+        }
+        input[type=checkbox]
+        {
+            display: none;
+            
+        }
+        
+        label
+        {
+            color: #000;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            display: none;
+            margin-bottom: 0.5rem;
+            @include maxWidth(768px)
+            {
+                display: inline-block;
+                padding: 8px 20px;
+                font-size: 15px;
+                text-decoration: none;
+                border: none;
+                
+                background-color: #ffffff;
+                cursor: pointer;
+            }
+        }
+        
+        ul
+        {
+            
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            @include maxWidth(768px)
+            {
+                display: none;
+                @include center-x;
+                z-index: 1;
+                
+
+            }
+            
+            li
+            {
+                list-style-type: none;
+                display: inline-block;
+                margin: 0;
+                &.active
+                {
+                    & a
+                    {
+                        color: #fff;
+                    }
+                }
+                @include maxWidth(768px)
+                {
+                    display: block;
+                    width: 100%;
+                    margin: 0.5em 0;
+                    
+                }
+                a
+                {
+                    text-transform: uppercase;
+                    color: rgba(255, 255, 255, 0.6);
+                    font-size: 18px;
+                    letter-spacing: 2px;
+                    font-weight: 600;
+                    margin: 0px 4px;
+                    padding: 12px 22px;
+                    background-color: transparent;
+                    transition: 0.5s all;
+                    outline: none;
+                    @include maxWidth(768px)
+                    {
+                        font-size: 16px;
+                        padding: 0;
+                    }
+                    &:hover
+                    {
+                        color: rgb(255, 255, 255);
+                    }
+                    
+                }
+
+            }
+        }
+    }
+    .header__banner
+    {
+        @include center;
+        
+        text-align: center;
+        text-transform: uppercase;
+        @include maxWidth(1270px)
+        {
+            width: 74%;
+            margin-top: 1rem;
+        }
+        @include maxWidth(568px)
+        {
+            width: 80%;
+            
+        }
+        h1
+        {
+            font-size: 38px;
+            letter-spacing: 0.25em;
+            font-weight: 900;
+            color: #fff;
+            @include maxWidth(992px)
+            {
+                font-size: 33px;
+                margin-bottom: 0em;
+            }
+           
+        }
+        p
+        {
+            color: rgba(255, 255, 255, 0.5);
+            letter-spacing: 0.2em;
+            font-size: 19px;
+            line-height: 1.6em;
+            @include maxWidth(992px)
+            {
+                font-size: 17px;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,140 @@
+@use "../utils" as *;
+@use "../globals" as *;
+#about
+{
+    background-color: #fb4386;
+    padding: 6rem 0;
+    @include maxWidth(1270px)
+    {
+        padding: 4rem 0;
+    }
+    @include maxWidth(992px)
+    {
+        padding: 3rem 0;
+    }
+    
+    .container
+    {
+        width: 1200px;
+        padding-right: 15px;
+        padding-left: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+        color: var(--white);
+        @include maxWidth(1270px)
+        {
+            width: 960px;
+        }
+        @include maxWidth(992px)
+        {
+            width: 720px;
+        }
+        @include maxWidth(768px)
+        {
+            width: 540px;
+        }
+        @include maxWidth(568px)
+        {
+            width: 100%;
+            
+        }
+        h3
+        {
+            font-size: 33px;
+            font-weight: 700;
+            letter-spacing: 0.25em;
+            margin-top: 0;
+            @include maxWidth(992px)
+            {
+                margin-bottom: 0;
+            }
+            @include maxWidth(568px)
+            {
+                letter-spacing: 0.1em;
+                font-size: 26px;
+            }
+        }
+        h2
+        {
+            font-size: 42px;
+            
+            font-weight: 700;
+            letter-spacing: 0.075em;
+            line-height: 1.35em;
+            border: solid 1px rgba(255, 255, 255, 0.281);
+            border-radius: 0.35em;
+            padding: 0.75em 0.25em;
+            margin: 0.7em 0;
+            @include maxWidth(1270px)
+            {
+                font-size: 39px;
+            }
+            @include maxWidth(992px)
+            {
+                font-size: 30px;
+                padding: 1em;
+            }
+            @include maxWidth(568px)
+            {
+                font-size: 26px;
+            }
+        }
+        p
+        {
+            font-size: 23px;
+            opacity: 0.75;
+            line-height: 1.8em;
+            @include maxWidth(992px)
+            {
+                font-size: 20px;
+            }
+            @include maxWidth(568px)
+            {
+                font-size: 16px;
+            }
+            &.p2
+            {
+                font-size: 21px;
+                width: 78%;
+                margin-bottom: 0;
+                @include maxWidth(1270px)
+                {
+                    width: 100%;
+                }
+                @include maxWidth(992px)
+                {
+                    font-size: 19px;
+                }
+                @include maxWidth(768px)
+                {
+                    font-size: 16px;
+                }
+                @include maxWidth(568px)
+                {
+                font-size: 15px;
+                }
+            }
+        }
+        .about_button
+        {
+            margin-top: 3rem;
+            a
+            {
+                display: inline-block;
+                font-size: 17px;
+                background-color: black;
+                color: var(--white);
+                padding: 0.9em 2.5em;
+                font-weight: 700;
+                letter-spacing: 0.25em;
+                border-radius: 0.25em;
+            }
+        }
+        
+        
+    }
+}

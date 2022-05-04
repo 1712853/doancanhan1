@@ -1,0 +1,219 @@
+@use "../utils" as *;
+@use "../globals" as *;
+.services
+{
+    padding: 6rem 0;
+    @include maxWidth(1270px)
+    {
+        padding: 4rem 0;
+    }
+    @include maxWidth(992px)
+    {
+        padding: 3rem 0;
+    }
+    
+    &__container
+    {
+        width: 1200px;
+        margin: auto;
+        text-align: center;
+        @include maxWidth(1270px)
+        {
+            width: 960px;
+        }
+        @include maxWidth(992px)
+        {
+            width: 720px;
+        }
+        @include maxWidth(768px)
+        {
+            width: 540px;
+        }
+        @include maxWidth(568px)
+        {
+            width: 100%;
+            padding: 0 1rem;
+            
+        }
+        img
+        {
+            width: 100%;
+        }
+        h3
+        {
+            font-size: 33px;
+            letter-spacing: 0.25em;
+            margin-bottom: 1.7em;
+            color: #484d55;
+            font-weight: 700;
+            @include maxWidth(568px)
+                {
+                    font-size: 26px;
+                }
+            &.h3
+            {
+                letter-spacing: 0.1em;
+                margin-bottom: 0;
+                @include maxWidth(992px)
+                {
+                    font-size: 30px;
+                }
+                @include maxWidth(568px)
+                {
+                    font-size: 24px;
+                    letter-spacing: 0.075em;
+                }
+            }
+            
+        }
+        p
+        {
+            font-size: 22px;
+            color: #b1b4b9;
+            @include maxWidth(992px)
+            {
+                font-size: 20px;
+            }
+            @include maxWidth(568px)
+            {
+                font-size: 16px;
+            }
+        }
+        &_flexbox
+        {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 2.5em;
+            .item
+            {
+                text-align: left;
+                padding: 3em 4em;
+                width: 50%;
+                display: flex;
+                align-items: flex-start;
+                @include maxWidth(992px)
+                {
+                    width: 100%;
+                    padding: 2em 4em;
+                }
+                @include maxWidth(568px)
+                {
+                    padding: 1em;
+                }
+                
+                span
+                {
+                    width: 64px;
+                    height: 64px;
+                    color: #fff;
+                    line-height: 64px;
+                    text-align: center;
+                    background: #2d3139;
+                    font-size: 24px;
+                    border-radius: 50%;
+                    @include maxWidth(568px)
+                    {
+                        width: 50px;
+                        height: 50px;
+                        line-height: 50px;
+                        font-size: 20px;
+                    }
+                }
+                div
+                {
+                    
+                    flex: 1 0 0;
+                    margin-left: 2em;
+                    h4
+                    {
+                        font-size: 22px;
+                        margin-top: 0;
+                        line-height: 1.75em;
+                        font-weight: 700;
+                        letter-spacing: 2px;
+                        margin-bottom: 0;
+                        color: #fb4386;
+                        @include maxWidth(568px)
+                        {
+                            font-size: 18px;
+                        }
+                    }
+                    p
+                    {
+                        font-size: 17px;
+                        line-height: 1.6em;
+                        color: #777;
+                        text-align: justify;
+                        @include maxWidth(568px)
+                        {
+                            font-size: 15px;
+                            
+                        }
+                    }
+                }
+            }
+        }
+        &_button
+        {
+            margin: 2.5em 0;
+            @include maxWidth(568px)
+            {
+                margin: 0;
+            }
+            a
+            {
+                padding: 16px 0px;
+                color: #fff;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-size: 16px;
+                letter-spacing: 0.25em;
+                border: 1px solid #1f232b;
+                background: #1f232b;
+                width: 23%;
+                display: inline-block;
+                border-radius: 0.25rem;
+                transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+                margin-right: 0.8em;
+                @include maxWidth(992px)
+                {
+                    width: 30%;
+                    
+                }
+                @include maxWidth(768px)
+                {
+                    width: 40%;
+                }
+                @include maxWidth(568px)
+                {
+                    width: 60%;
+                    margin-right: 0;
+                    margin: 0.8em 0;
+                }
+                &:hover
+                {
+                    color: #9999a1;
+                    background-color: #1f232bf1;
+                }
+                &.a--style
+                {
+                    background: none;
+                    border: 1px solid #606167;
+                    color: #606167;
+                    margin-left: 0.8em;
+                    margin-right: 0;
+                    @include maxWidth(568px)
+                    {
+                        margin-left: 0;
+                    }
+                    &:hover
+                    {
+                        color: #9999a1;
+                    }
+                }
+               
+            }
+            
+        }
+    }
+}
