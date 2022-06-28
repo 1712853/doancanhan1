@@ -2,10 +2,10 @@
 @use "../globals" as *;
 .services
 {
-    padding: 6rem 0;
+    padding: 4rem 0;
     @include maxWidth(1270px)
     {
-        padding: 4rem 0;
+        padding: 3.5rem 0;
     }
     @include maxWidth(992px)
     {
@@ -132,7 +132,7 @@
                         font-weight: 700;
                         letter-spacing: 2px;
                         margin-bottom: 0;
-                        color: #fb4386;
+                        color: var(--main-color-1);
                         @include maxWidth(568px)
                         {
                             font-size: 18px;

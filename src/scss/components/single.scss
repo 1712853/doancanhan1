@@ -1,11 +1,15 @@
 @use "../utils" as *;
 @use "../globals" as *;
 
+
+
+
+
 .single
 {
     &__header
     {
-        min-height: 500px;
+        min-height: 700px;
         @include maxWidth(1270px)
         {
             min-height: 450px;
@@ -77,9 +81,9 @@
             {
                 font-size: 20px;
                 padding: 7px 32px;
-                color: #fff;
+                color: var(--white);
                 letter-spacing: 2px;
-                background: #fb4386;
+                background: var(--main-color-1);
                 transition: 0.5s all;
                 border: 1px solid transparent;
                 display: inline-block;
@@ -88,8 +92,8 @@
                 cursor: pointer;
                 &:hover
                 {
-                    color: white;
-                    background-color: black;
+                    // color: var(--white);
+                    background-color: #007bff;
                 }
             }
             .single__left
@@ -123,7 +127,7 @@
                     }
                     h4
                     {
-                        color: #fb4386;
+                        color: var(--main-color-1);
                         font-size: 21px;
                         text-transform: uppercase;
                         letter-spacing: 2px;
@@ -132,7 +136,7 @@
                     }
                     p
                     {
-                        color: #000000;
+                        color: black;
                         font-size: 21px;
                         text-transform: capitalize;
                         line-height: 34px;
@@ -181,20 +185,21 @@
                         a.button
                         {
                             padding: 14px 40px;
-                            color: #fff;
+                            color: var(--white);
                             font-weight: 700;
                             text-transform: uppercase;
                             font-size: 1em;
                             letter-spacing: 0.25em;
-                            border: 1px solid #1f232b;
-                            background: #1f232b;
+                            border: 1px solid #2d3440;
+                            background: #2d3440;
                             border-radius: 0.25rem;
                             transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
                             display: inline-block;
                             @include maxWidth(568px)
                             {
                                 width: fit-content;
-                                
+                                font-size: 0.95em;
+                                padding: 12px 35px;
                             }
                         }
                         div
@@ -206,12 +211,21 @@
                                 margin: 0 4px;
                                 span
                                 {
-                                    color: white;
-                                    background-color: #fb4386;
+                                    width: 41px;
+                                    text-align: center;
+                                    color: var(--white);
+                                    background-color: var(--main-color-1);
                                     font-size: 14px;
                                     padding: 15px 13px; 
+                                    transition: 0.5s all;
+                                    &:hover
+                                    {
+                                        color: black;
+                                    }
                                 }
+                               
                             }
+                            
                         }
                     }
                     
@@ -226,7 +240,7 @@
                     h3
                     {
                         text-align: center;
-                        color: #484d55;
+                        
                         font-weight: 700;
                         letter-spacing: 0.25em;
                         font-size: 32px;
@@ -254,7 +268,7 @@
                         img
                         {
                             flex-basis: 25%;
-                           
+                            width: 100%;
                             padding: 0 2em 3em;
                             @include maxWidth(992px)
                             {
@@ -266,7 +280,7 @@
                             }
                             @include maxWidth(568px)
                             {
-                                width: 25%;
+                                width: 30%;
                                 padding: 0;
                                 margin: auto;
 
@@ -278,7 +292,7 @@
                             padding: 0 1rem;
                             a
                             {
-                                color: #fb4386;
+                                color: var(--main-color-1);
                                 font-size: 21px;
                                 text-transform: uppercase;
                                 letter-spacing: 2px;
@@ -287,7 +301,7 @@
                             p
                             {
                                 font-size: 14px;
-                                color: #000;
+                                color: black;
                                 line-height: 28px;
                             }
                             ul
@@ -298,18 +312,18 @@
                                 {
                                     display: inline-block;
                                     font-size: 16px;
-                                    color: #929292;
+                                    color: var(--grey1);
                                     font-weight: 600;
                                     letter-spacing: 1px;
                                     margin-right: 0.2em;
                                     a
                                     {
                                         font-size: 15px;
-                                        border-left: 2px solid #929292;
+                                        border-left: 2px solid var(--grey1);
                                         padding-left: 0.6em;
                                         &:hover
                                         {
-                                            color: #000;
+                                            color: black;
                                         }
                                     }
                                 }
@@ -329,7 +343,7 @@
                         }
                         h4
                         {
-                            color: #fb4386;
+                            color: var(--main-color-1);
                             font-size: 21px;
                             text-transform: uppercase;
                             letter-spacing: 2px;
@@ -338,7 +352,7 @@
                         input[type=text], input[type=email], textarea
                         {
                             font-size: 15px;
-                            color: #000;
+                            color: black;
                             padding: 0.9em;
                             
                             background: #f1f1f1;
@@ -350,7 +364,7 @@
                         {
                             border-bottom: 1px;
                             border-style: none none solid none;
-                            border-color: #fb4386;
+                            border-color: var(--main-color-1);
                             flex-basis: 50%;
                         }
                         input[type=text]
@@ -376,7 +390,7 @@
                             height: 10em;
                             margin: 1.5em 0;
                             border: none;
-                            border-bottom: 1px solid #fb4386;
+                            border-bottom: 1px solid var(--main-color-1);
                         }
                         
 
@@ -423,7 +437,7 @@
                     {
                         font-size: 15px;
                         border: none;
-                        border-bottom: 1px solid #fb4386;
+                        border-bottom: 1px solid var(--main-color-1);
                         padding: 0.9em;
                         outline: none;
                         background: #f1f1f1;
@@ -457,12 +471,12 @@
                             a
                             {
                                 font-size: 17px;
-                                color: #929292;
+                                color: var(--grey1);
                                 font-weight: 600;
                                 letter-spacing: 1px;
                                 &:hover
                                 {
-                                    color: #000;
+                                    color: black;
                                 }
                             }
                         }
@@ -493,19 +507,19 @@
                             a
                             {
                                 padding: 11px 40px;
-                                border: 1px solid #fb4386;
-                                color: #fff;
+                                border: 1px solid var(--main-color-1);
+                                color: var(--white);
                                 text-decoration: none;
                                 letter-spacing: 2px;
-                                background: #fb4386;
+                                background: var(--main-color-1);
                                 font-weight: 500;
                                 display: block;
                                 font-size: 15px;
                                 margin: 13px 9px;
                                 &:hover
                                 {
-                                    color: white;
-                                    background: #000;
+                                    color: var(--white);
+                                    background: black;
                                 }
                             }
                         }
@@ -545,7 +559,7 @@
                             {
                                 line-height: 30px;
                                 font-size: 17px;
-                                color: #929292;
+                                color: var(--grey1);
                                 font-weight: 600;
                                 letter-spacing: 1px;
                             }
@@ -557,11 +571,11 @@
                                 {
                                     display: inline-block;
                                     margin-right: 16px;
-                                    color: #fb4386;
+                                    color: var(--main-color-1);
                                     font-size: 15px;
                                     &:hover
                                     {
-                                        color: #000;
+                                        color: black;
                                     }
                                 }
                             }

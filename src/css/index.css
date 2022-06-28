@@ -32,6 +32,8 @@ button, input {
 }
 
 :root {
+  --main-color-1: #fb4386;
+  --grey1:#929292;
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -82,6 +84,18 @@ header {
   header {
     min-height: 420px;
   }
+}
+header #changeColor {
+  position: absolute;
+  top: 30px;
+  left: 35px;
+  font-size: 30px;
+}
+header .darkMode {
+  color: #FF9F29;
+}
+header .normal {
+  color: rgb(251, 67, 134);
 }
 header nav {
   padding-top: 4.5rem;
@@ -215,8 +229,8 @@ header .header__banner p {
 }
 
 #about {
-  background-color: #fb4386;
-  padding: 6rem 0;
+  background-color: var(--main-color-1);
+  padding: 5.5rem 0;
 }
 @media screen and (max-width: 1270px) {
   #about {
@@ -358,11 +372,11 @@ header .header__banner p {
 }
 
 .services {
-  padding: 6rem 0;
+  padding: 4rem 0;
 }
 @media screen and (max-width: 1270px) {
   .services {
-    padding: 4rem 0;
+    padding: 3.5rem 0;
   }
 }
 @media screen and (max-width: 992px) {
@@ -492,7 +506,7 @@ header .header__banner p {
   font-weight: 700;
   letter-spacing: 2px;
   margin-bottom: 0;
-  color: #fb4386;
+  color: var(--main-color-1);
 }
 @media screen and (max-width: 568px) {
   .services__container_flexbox .item div h4 {
@@ -571,12 +585,12 @@ header .header__banner p {
 }
 
 .news {
-  padding: 6rem 0;
+  padding: 4rem 0;
   background: #f3f3f3;
 }
 @media screen and (max-width: 1270px) {
   .news {
-    padding: 4rem 0;
+    padding: 3.5rem 0;
   }
 }
 @media screen and (max-width: 992px) {
@@ -663,7 +677,7 @@ header .header__banner p {
   font-size: 24px;
   font-weight: 500;
   letter-spacing: 2.5px;
-  color: #fb4386;
+  color: var(--main-color-1);
   margin-bottom: 0;
 }
 @media screen and (max-width: 992px) {
@@ -684,20 +698,30 @@ header .header__banner p {
 }
 .news__container_flexbox .item a {
   display: inline-block;
-  padding: 10px 38px;
+  padding: 11px 38px;
   color: #ffffff;
   font-weight: 700;
   letter-spacing: 0.2em;
   font-size: 15px;
-  background: #fb4386;
-  border: 1px solid #fb4386;
+  background: var(--main-color-1);
+  border: 1px solid var(--main-color-1);
   text-transform: uppercase;
   border-radius: 0.3em;
+}
+@media screen and (max-width: 568px) {
+  .news__container_flexbox .item a {
+    font-size: 14px;
+    padding: 10px 37px;
+  }
+}
+.news__container_flexbox .item a:hover {
+  background-color: #007bff;
+  border-color: #007bff;
 }
 
 .contact {
   background: #282b34;
-  padding: 3rem 0;
+  padding: 1.5rem 0;
 }
 @media screen and (max-width: 992px) {
   .contact {
@@ -885,8 +909,8 @@ header .header__banner p {
   }
 }
 .contact__container_bottom form input[type=submit], .contact__container_bottom form input[type=reset]:hover {
-  background-color: #fb4386;
-  border: 1px solid #fb4386;
+  background-color: var(--main-color-1);
+  border: 1px solid var(--main-color-1);
 }
 .contact__container_bottom .flexbox {
   padding: 0 1.5rem;
@@ -952,7 +976,7 @@ header .header__banner p {
 }
 .contact__container_bottom .flexbox .item div h5 {
   font-size: 20px;
-  color: #fb4386;
+  color: var(--main-color-1);
   margin-bottom: 0.9em;
   margin-top: 0;
   letter-spacing: 0.05em;
@@ -987,12 +1011,12 @@ header .header__banner p {
   margin: 0;
 }
 .contact__container footer a {
-  color: #fb4386;
+  color: var(--main-color-1);
   font-size: 17px;
 }
 
 .single__header {
-  min-height: 500px;
+  min-height: 700px;
 }
 @media screen and (max-width: 1270px) {
   .single__header {
@@ -1069,9 +1093,9 @@ header .header__banner p {
 .single__container_flexbox .click {
   font-size: 20px;
   padding: 7px 32px;
-  color: #fff;
+  color: var(--white);
   letter-spacing: 2px;
-  background: #fb4386;
+  background: var(--main-color-1);
   transition: 0.5s all;
   border: 1px solid transparent;
   display: inline-block;
@@ -1080,8 +1104,7 @@ header .header__banner p {
   cursor: pointer;
 }
 .single__container_flexbox .click:hover {
-  color: white;
-  background-color: black;
+  background-color: #007bff;
 }
 .single__container_flexbox .single__left {
   flex-basis: 66.66%;
@@ -1108,7 +1131,7 @@ header .header__banner p {
   box-shadow: -3px 11px 20px 0px #808080;
 }
 .single__container_flexbox .single__left .post h4 {
-  color: #fb4386;
+  color: var(--main-color-1);
   font-size: 21px;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -1116,7 +1139,7 @@ header .header__banner p {
   margin: 0;
 }
 .single__container_flexbox .single__left .post p {
-  color: #000000;
+  color: black;
   font-size: 21px;
   text-transform: capitalize;
   line-height: 34px;
@@ -1163,13 +1186,13 @@ header .header__banner p {
 }
 .single__container_flexbox .single__left .post__flexbox a.button {
   padding: 14px 40px;
-  color: #fff;
+  color: var(--white);
   font-weight: 700;
   text-transform: uppercase;
   font-size: 1em;
   letter-spacing: 0.25em;
-  border: 1px solid #1f232b;
-  background: #1f232b;
+  border: 1px solid #2d3440;
+  background: #2d3440;
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   display: inline-block;
@@ -1177,6 +1200,8 @@ header .header__banner p {
 @media screen and (max-width: 568px) {
   .single__container_flexbox .single__left .post__flexbox a.button {
     width: fit-content;
+    font-size: 0.95em;
+    padding: 12px 35px;
   }
 }
 .single__container_flexbox .single__left .post__flexbox div {
@@ -1186,10 +1211,16 @@ header .header__banner p {
   margin: 0 4px;
 }
 .single__container_flexbox .single__left .post__flexbox div a span {
-  color: white;
-  background-color: #fb4386;
+  width: 41px;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--main-color-1);
   font-size: 14px;
   padding: 15px 13px;
+  transition: 0.5s all;
+}
+.single__container_flexbox .single__left .post__flexbox div a span:hover {
+  color: black;
 }
 .single__container_flexbox .single__left .comment {
   margin-top: 2rem;
@@ -1201,7 +1232,6 @@ header .header__banner p {
 }
 .single__container_flexbox .single__left .comment h3 {
   text-align: center;
-  color: #484d55;
   font-weight: 700;
   letter-spacing: 0.25em;
   font-size: 32px;
@@ -1227,6 +1257,7 @@ header .header__banner p {
 }
 .single__container_flexbox .single__left .comment__item img {
   flex-basis: 25%;
+  width: 100%;
   padding: 0 2em 3em;
 }
 @media screen and (max-width: 992px) {
@@ -1241,7 +1272,7 @@ header .header__banner p {
 }
 @media screen and (max-width: 568px) {
   .single__container_flexbox .single__left .comment__item img {
-    width: 25%;
+    width: 30%;
     padding: 0;
     margin: auto;
   }
@@ -1251,7 +1282,7 @@ header .header__banner p {
   padding: 0 1rem;
 }
 .single__container_flexbox .single__left .comment__item_content a {
-  color: #fb4386;
+  color: var(--main-color-1);
   font-size: 21px;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -1259,7 +1290,7 @@ header .header__banner p {
 }
 .single__container_flexbox .single__left .comment__item_content p {
   font-size: 14px;
-  color: #000;
+  color: black;
   line-height: 28px;
 }
 .single__container_flexbox .single__left .comment__item_content ul {
@@ -1269,18 +1300,18 @@ header .header__banner p {
 .single__container_flexbox .single__left .comment__item_content ul li {
   display: inline-block;
   font-size: 16px;
-  color: #929292;
+  color: var(--grey1);
   font-weight: 600;
   letter-spacing: 1px;
   margin-right: 0.2em;
 }
 .single__container_flexbox .single__left .comment__item_content ul li a {
   font-size: 15px;
-  border-left: 2px solid #929292;
+  border-left: 2px solid var(--grey1);
   padding-left: 0.6em;
 }
 .single__container_flexbox .single__left .comment__item_content ul li a:hover {
-  color: #000;
+  color: black;
 }
 .single__container_flexbox .single__left .comment__form_flexbox {
   display: flex;
@@ -1292,7 +1323,7 @@ header .header__banner p {
   }
 }
 .single__container_flexbox .single__left .comment__form h4 {
-  color: #fb4386;
+  color: var(--main-color-1);
   font-size: 21px;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -1300,7 +1331,7 @@ header .header__banner p {
 }
 .single__container_flexbox .single__left .comment__form input[type=text], .single__container_flexbox .single__left .comment__form input[type=email], .single__container_flexbox .single__left .comment__form textarea {
   font-size: 15px;
-  color: #000;
+  color: black;
   padding: 0.9em;
   background: #f1f1f1;
   outline: none;
@@ -1309,7 +1340,7 @@ header .header__banner p {
 .single__container_flexbox .single__left .comment__form input[type=text], .single__container_flexbox .single__left .comment__form input[type=email] {
   border-bottom: 1px;
   border-style: none none solid none;
-  border-color: #fb4386;
+  border-color: var(--main-color-1);
   flex-basis: 50%;
 }
 .single__container_flexbox .single__left .comment__form input[type=text] {
@@ -1334,7 +1365,7 @@ header .header__banner p {
   height: 10em;
   margin: 1.5em 0;
   border: none;
-  border-bottom: 1px solid #fb4386;
+  border-bottom: 1px solid var(--main-color-1);
 }
 .single__container_flexbox .single__right {
   flex-basis: 33.34%;
@@ -1371,7 +1402,7 @@ header .header__banner p {
 .single__container_flexbox .single__right .newsletter input[type=text] {
   font-size: 15px;
   border: none;
-  border-bottom: 1px solid #fb4386;
+  border-bottom: 1px solid var(--main-color-1);
   padding: 0.9em;
   outline: none;
   background: #f1f1f1;
@@ -1402,12 +1433,12 @@ header .header__banner p {
 }
 .single__container_flexbox .single__right .categories ul li a {
   font-size: 17px;
-  color: #929292;
+  color: var(--grey1);
   font-weight: 600;
   letter-spacing: 1px;
 }
 .single__container_flexbox .single__right .categories ul li a:hover {
-  color: #000;
+  color: black;
 }
 .single__container_flexbox .single__right .tags {
   padding: 2rem 1rem;
@@ -1432,19 +1463,19 @@ header .header__banner p {
 }
 .single__container_flexbox .single__right .tags ul li a {
   padding: 11px 40px;
-  border: 1px solid #fb4386;
-  color: #fff;
+  border: 1px solid var(--main-color-1);
+  color: var(--white);
   text-decoration: none;
   letter-spacing: 2px;
-  background: #fb4386;
+  background: var(--main-color-1);
   font-weight: 500;
   display: block;
   font-size: 15px;
   margin: 13px 9px;
 }
 .single__container_flexbox .single__right .tags ul li a:hover {
-  color: white;
-  background: #000;
+  color: var(--white);
+  background: black;
 }
 .single__container_flexbox .single__right .blog {
   box-shadow: -3px 11px 20px 0px #808080;
@@ -1477,7 +1508,7 @@ header .header__banner p {
 .single__container_flexbox .single__right .blog__container_item .link {
   line-height: 30px;
   font-size: 17px;
-  color: #929292;
+  color: var(--grey1);
   font-weight: 600;
   letter-spacing: 1px;
 }
@@ -1488,11 +1519,11 @@ header .header__banner p {
 .single__container_flexbox .single__right .blog__container_item .note a {
   display: inline-block;
   margin-right: 16px;
-  color: #fb4386;
+  color: var(--main-color-1);
   font-size: 15px;
 }
 .single__container_flexbox .single__right .blog__container_item .note a:hover {
-  color: #000;
+  color: black;
 }
 
 /*# sourceMappingURL=index.css.map */

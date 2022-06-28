@@ -3,11 +3,11 @@
 
 .news
 {
-    padding: 6rem 0;
+    padding: 4rem 0;
     background: #f3f3f3;
     @include maxWidth(1270px)
     {
-        padding: 4rem 0;
+        padding: 3.5rem 0;
     }
     @include maxWidth(992px)
     {
@@ -89,7 +89,7 @@
                     font-size: 24px;
                     font-weight: 500;
                     letter-spacing: 2.5px;
-                    color: #fb4386;
+                    color: var(--main-color-1);
                     margin-bottom: 0;
                     @include maxWidth(992px)
                     {
@@ -111,16 +111,26 @@
                 {
                     display: inline-block;
                     
-                    padding: 10px 38px;
+                    padding: 11px 38px;
                     color: #ffffff;
                     font-weight: 700;
                     letter-spacing: 0.2em;
                     font-size: 15px;
-                    background: #fb4386;
-                    border: 1px solid #fb4386;
+                    background: var(--main-color-1);
+                    border: 1px solid var(--main-color-1);
                     text-transform: uppercase;
-                   
                     border-radius: 0.3em;
+
+                    @include maxWidth(568px)
+                    {
+                        font-size: 14px;
+                        padding: 10px 37px;
+                    }
+                    &:hover
+                    {
+                        background-color: #007bff;
+                        border-color: #007bff;
+                    }
                 }
             }
         }

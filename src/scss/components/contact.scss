@@ -3,7 +3,7 @@
 .contact
 {
     background: #282b34;
-    padding: 3rem 0;
+    padding: 1.5rem 0;
     @include maxWidth(992px)
     {
         padding: 1rem;
@@ -189,8 +189,8 @@
                 }
                 input[type="submit"],input[type="reset"]:hover
                 {
-                    background-color: #fb4386;
-                    border: 1px solid #fb4386;
+                    background-color: var(--main-color-1);
+                    border: 1px solid var(--main-color-1);
                     
                 }
                
@@ -261,7 +261,7 @@
                         h5
                         {
                             font-size: 20px;
-                            color: #fb4386;
+                            color: var(--main-color-1);
                             margin-bottom: 0.9em;
                             margin-top: 0;
                             letter-spacing: 0.05em;
@@ -306,7 +306,7 @@
             }
             a
             {
-                color: #fb4386;
+                color: var(--main-color-1);
                 font-size: 17px;
             }
         }
