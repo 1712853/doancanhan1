@@ -167,7 +167,7 @@ header nav ul li.active a {
 header nav ul li a {
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.6);
-  font-size: 18px;
+  font-size: 20px;
   letter-spacing: 2px;
   font-weight: 600;
   margin: 0px 4px;
