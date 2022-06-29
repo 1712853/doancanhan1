@@ -128,14 +128,13 @@ function themeblack()
     
 }
 
-
-localStorage.setItem("mode","darkMode");
-let mode = localStorage.getItem("mode");
 let changeMode = document.getElementById("changeColor");
+
+let mode = localStorage.getItem("mode");
 changeMode.className = mode;
 if (changeMode.className === "normal") themeblack();
     else themeWhite();
-
+localStorage.setItem("mode",changeMode.className);
 changeMode.addEventListener("click",function()
 {
     changeMode.classList.toggle("darkMode");
@@ -143,6 +142,4 @@ changeMode.addEventListener("click",function()
     if (changeMode.className === "normal") themeblack();
     else themeWhite();
     localStorage.setItem("mode",changeMode.className);
-
-
 })
