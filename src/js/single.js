@@ -38,7 +38,6 @@ function themeWhite()
 {
     document.body.style.setProperty('--main-color-1', '#fb4386'); 
     document.body.style.setProperty('--grey1', '#929292'); 
-  
     let single = document.getElementById("single");
     styleBgColor(single,"white");
     let contact = document.getElementById("contact");
@@ -47,7 +46,6 @@ function themeWhite()
     styleColorArr(h3,"black");
     let h3Contact = document.querySelectorAll(".contact__container_top h3");
     styleColorArr(h3Contact,"#fff");
-
     let p = document.getElementsByTagName("p");
     styleColorArr(p,"black");
     let pContact1 = document.querySelectorAll(".contact__container_top p");
@@ -90,14 +88,12 @@ function themeblack()
 {
     document.body.style.setProperty('--main-color-1', 'rgba(254, 157, 38, 0.973)'); 
     document.body.style.setProperty('--grey1', '#e58148'); 
-
     let single = document.getElementById("single");
     styleBgColor(single,"#1c1c20");
     let contact = document.getElementById("contact");
     styleBgColor(contact,"#111");
     let h3 = document.getElementsByTagName("h3");
     styleColorArr(h3,"#fe9d26f8");
-
     let p = document.getElementsByTagName("p");
     styleColorArr(p,"white");
     let a1 = document.querySelectorAll(".single__container_flexbox .single__left .post ul li a");
@@ -133,12 +129,9 @@ function themeblack()
 }
 
 
-
-
+localStorage.setItem("mode","darkMode");
 let mode = localStorage.getItem("mode");
-
 let changeMode = document.getElementById("changeColor");
-
 changeMode.className = mode;
 if (changeMode.className === "normal") themeblack();
     else themeWhite();

@@ -157,6 +157,7 @@ function themeblack()
 
     
 }
+localStorage.setItem("mode","darkMode");
 let mode = localStorage.getItem("mode");
 let changeMode = document.getElementById("changeColor");
 changeMode.className = mode;
