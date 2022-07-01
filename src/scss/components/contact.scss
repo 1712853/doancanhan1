@@ -166,7 +166,7 @@
                     margin: 1em 0em;
                     overflow: auto;
                 }
-                input[type="submit"],input[type="reset"]
+                #contact__signup_btn,#contact__reset_btn
                 {
                     outline: none;
                     padding: 14px 0;
@@ -187,7 +187,7 @@
                         width: 40%;
                     }
                 }
-                input[type="submit"],input[type="reset"]:hover
+                #contact__signup_btn,#contact__reset_btn:hover
                 {
                     background-color: var(--main-color-1);
                     border: 1px solid var(--main-color-1);

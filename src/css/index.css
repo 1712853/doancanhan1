@@ -31,6 +31,10 @@ button, input {
   overflow: visible;
 }
 
+#err-name, #err-email {
+  margin: 0;
+}
+
 :root {
   --main-color-1: #fb4386;
   --grey1:#929292;
@@ -887,7 +891,7 @@ header .header__banner p {
   margin: 1em 0em;
   overflow: auto;
 }
-.contact__container_bottom form input[type=submit], .contact__container_bottom form input[type=reset] {
+.contact__container_bottom form #contact__signup_btn, .contact__container_bottom form #contact__reset_btn {
   outline: none;
   padding: 14px 0;
   font-size: 17px;
@@ -904,11 +908,11 @@ header .header__banner p {
   margin-right: 0.5em;
 }
 @media screen and (max-width: 568px) {
-  .contact__container_bottom form input[type=submit], .contact__container_bottom form input[type=reset] {
+  .contact__container_bottom form #contact__signup_btn, .contact__container_bottom form #contact__reset_btn {
     width: 40%;
   }
 }
-.contact__container_bottom form input[type=submit], .contact__container_bottom form input[type=reset]:hover {
+.contact__container_bottom form #contact__signup_btn, .contact__container_bottom form #contact__reset_btn:hover {
   background-color: var(--main-color-1);
   border: 1px solid var(--main-color-1);
 }
@@ -1101,6 +1105,7 @@ header .header__banner p {
   display: inline-block;
   line-height: 1.5;
   border-radius: 0.25rem;
+  outline: none;
   cursor: pointer;
 }
 .single__container_flexbox .click:hover {

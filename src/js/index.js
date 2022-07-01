@@ -158,28 +158,99 @@ function themeblack()
     
 }
 
+
+function validateEmail(email) {
+
+    let length = email.length;
+    let count1 = 0;
+    let count2 = 0;
+    let vt1 = -1;
+    let vt2 = -1;
+    if (length < 5) return false;
+    for (let i = 0; i < length; i++) {
+      if (email[i] == "@") 
+      {
+        count1++;
+        vt1 = i;
+      
+      }
+      else {
+            if (email[i] == ".") 
+            {
+                count2++;
+                vt2 = i;
+         
+            }
+            else if (!((email[i] >= "A" && email[i] <= "Z") || (email[i] >= "a" && email[i] <= "z") || (email[i] >= "0" && email[i] <= "9")))
+                return false;
+            }
+    }
+ 
+    if ((count1 == 1) && (count2 == 1) && (vt2 > vt1 + 1) && (vt1 > 0) && (vt2 < length-1)) 
+    {
+        return true;
+    }
+    else return false;
+    
+  }
+
+function validateName(name)
+{
+    let length = name.length;
+    if (length < 2) return false;
+    for (let i = 0; i < length; i++) {
+        if (name[i] == " ") continue;
+        if (!((name[i] >= "A" && name[i] <= "Z") || (name[i] >= "a" && name[i] <= "z")))
+        return false;
+    }
+    return true;
+}
+
+function setValidateFormEvent() {
+    const signBtn = document.getElementById("contact__signup_btn");
+   
+    
+    signBtn.addEventListener("click", function () {
+     
+      let name = document.getElementById("contact__name").value.trim();
+      let email = document.getElementById("contact__email").value.trim();
+      let mes = document.getElementById("contact__mes").value.trim();
+      
+      if (!validateName(name)) alert("Vui lòng nhập tên lớn hơn 1 ký tự, không dấu, không có số và không có ký tự đặt biệt");
+      if (!validateEmail(email)) alert("Vui lòng nhập đúng địng dạng email x@y.z (x,y,z không chứa ký tự đặc biệt)");
+      if (mes == "") alert("Vui lòng nhập tin nhắn");
+        
+    });
+    const resetlBtn = document.getElementById("contact__reset_btn");
+    resetlBtn.addEventListener("click", function(){
+        document.getElementById("contact__name").value = "";
+        document.getElementById("contact__email").value = "";
+        document.getElementById("contact__mes").value = "";
+    })
+  }
+setValidateFormEvent();
+
+
 let changeMode = document.getElementById("changeColor");
 let mode = localStorage.getItem("mode");
 if (mode === "") {localStorage.setItem("mode",changeMode.className);
     mode = localStorage.getItem("mode");
-    console.log(mode);
-    console.log(1);
 }
 
-console.log(mode);
+
 changeMode.className = mode;
 
 if (changeMode.className === "normal") themeblack();
     else themeWhite();
 localStorage.setItem("mode",changeMode.className);
-console.log(changeMode.className);
+
 changeMode.addEventListener("click",function()
 {
     changeMode.classList.toggle("darkMode");
     changeMode.classList.toggle("normal");
     if (changeMode.className === "normal") themeblack();
     else themeWhite();
-    console.log(changeMode.className);
+
     localStorage.setItem("mode",changeMode.className);
 
 })
