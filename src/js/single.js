@@ -198,9 +198,9 @@ setValidateFormEvent();
 
 let changeMode = document.getElementById("changeColor");
 let mode = localStorage.getItem("mode");
-if (mode === "null") {localStorage.setItem(changeMode.className);
+
+if (!mode) {localStorage.setItem("mode",changeMode.className);
     mode = localStorage.getItem("mode");
-   
 }
 changeMode.className = mode;
 if (changeMode.className === "normal") themeblack();
