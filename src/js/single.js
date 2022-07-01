@@ -198,7 +198,7 @@ setValidateFormEvent();
 
 let changeMode = document.getElementById("changeColor");
 let mode = localStorage.getItem("mode");
-if (mode === "") {localStorage.setItem(changeMode.className);
+if (mode === "null") {localStorage.setItem(changeMode.className);
     mode = localStorage.getItem("mode");
    
 }
